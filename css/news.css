@@ -1,0 +1,70 @@
+/* --- Accenture News Section (Marquee Version) --- */
+
+#news-section {
+    background: #000;
+    padding: 6rem 0;
+    overflow: hidden; /* Prevent horizontal scrollbar on the page */
+}
+
+.news-main-title {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    color: #fff;
+}
+
+.news-carousel-window {
+    width: 100%;
+    overflow: hidden; /* This is crucial for the marquee effect */
+}
+
+/* Pause animation on hover */
+.news-carousel-window:hover .news-carousel-track {
+    animation-play-state: paused;
+}
+
+/* Define the keyframes for the continuous scroll */
+@keyframes marquee-scroll {
+    0% {
+        transform: translateX(0%);
+    }
+    100% {
+        /* Move the track left by the width of the original items (50% of its total width) */
+        transform: translateX(-50%);
+    }
+}
+
+.news-carousel-track {
+    display: flex;
+    /* We have 8 items, so the track is twice as wide as the set of original items */
+    width: calc(400px * 8); /* (width of one item) * (number of total items) */
+    
+    /* Apply the animation */
+    animation: marquee-scroll 40s linear infinite;
+    
+    /* Remove the old transition from the paginated carousel */
+    transition: none; 
+}
+
+.news-item {
+    width: 400px; /* Give each item a fixed width */
+    flex-shrink: 0;
+    padding-right: 2rem; /* Spacing between items */
+    box-sizing: content-box;
+}
+
+.news-date {
+    color: #a0a0a0;
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+.news-title {
+    color: #fff;
+    font-size: 1.8rem;
+    font-weight: 500;
+}
+
+/* We don't need the controls anymore, so we can remove their styles */
+.news-carousel-controls, .news-nav-btn {
+    display: none;
+}
