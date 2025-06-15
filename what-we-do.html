@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>What We Do: Our Services | Accenture</title>
+    
+    <!-- Reusing existing styles -->
+    <link rel="stylesheet" href="css/style.css">
+    
+    <!-- New style file for this page -->
+    <link rel="stylesheet" href="css/what-we-do.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    
+    <!-- Re-use the Header -->
+    <header>
+        <nav class="main-nav container">
+            <a href="index.html" class="logo"><img src="assets/images/logo.png" alt="Accenture Logo"></a>
+            <ul class="nav-links">
+                <li><a href="what-we-do.html">What we do</a></li>
+                <li><a href="#">What we think</a></li>
+                <li><a href="who-we-are.html">Who we are</a></li>
+                <li><a href="careers.html">Careers</a></li>
+            </ul>
+            <div class="nav-actions">
+                <a href="#" class="search-icon" aria-label="Search"><img src="assets/images/searc.png" alt="Search"></a>
+                <a href="#" class="region-selector">India</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Purple Sub-Navigation -->
+        <nav class="sub-nav purple-bg">
+            <div class="container sub-nav-links">
+                <a href="#">What we do</a>
+                <a href="#" class="active">Capabilities</a>
+                <a href="#">Partners</a>
+                <a href="#">Industries</a>
+                <a href="#">Awards</a>
+                <a href="#">Case studies</a>
+            </div>
+        </nav>
+
+        <!-- =================================== -->
+        <!-- NEW HERO SECTION TO BE ADDED HERE -->
+        <!-- =================================== -->
+        <section class="services-hero">
+            <div class="container services-hero-grid">
+                <div class="services-hero-image">
+                    <!-- Make sure you have an image with this name in your assets folder -->
+                    <img src="assets/images/what-we-do.png" alt="Person wearing VR headset with a glowing world map projection">
+                </div>
+                <div class="services-hero-text">
+                    <h2>Reinvent what your business could be</h2>
+                    <p>Our wide range of capabilities, ecosystem partnerships and unmatched industry expertise can help your business become the next best version of itself.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Capabilities Section -->
+        <section id="capabilities" class="interactive-section">
+            <div class="container">
+                <div class="section-intro">
+                    <p class="section-tag">Capabilities</p>
+                    <h2>The capabilities to help you reinvent</h2>
+                </div>
+                <div class="interactive-grid">
+                    <!-- Left Column: List of Links -->
+                    <div class="interactive-list">
+                        <button class="capability-link active" data-target="cap-cloud">Cloud</button>
+                        <button class="capability-link" data-target="cap-customer-service">Customer Service</button>
+                        <button class="capability-link">Cybersecurity</button>
+                        <button class="capability-link">Data and Artificial Intelligence</button>
+                        <!-- Add other capabilities as disabled buttons for visual purposes -->
+                    </div>
+                    <!-- Right Column: Dynamic Content -->
+                    <div class="interactive-content-display">
+                        <!-- Cloud Content -->
+                        <div id="cap-cloud" class="capability-content active">
+                            <h3>Take the world by cloud</h3>
+                            <p>Every day, cloud computing becomes more integral in driving reinvention, and meeting the ever-changing needs of people around the world.</p>
+                            <img src="assets/images/cloud.png" alt="Cloud illustration">
+                        </div>
+                        <!-- Customer Service Content -->
+                        <div id="cap-customer-service" class="capability-content">
+                            <h3>Turn customer service into a growth engine</h3>
+                            <p>Delivering seamless, data-driven experiences that feel intuitive, not reactive, is vital to unlocking new opportunities for growth.</p>
+                            <img src="assets/images/customer.png" alt="Customer Service illustration">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Unmatched Industry Expertise Section -->
+        <section id="industries" class="interactive-section">
+            <div class="container">
+                <div class="section-intro">
+                    <p class="section-tag">Industries</p>
+                    <h2>Unmatched industry expertise</h2>
+                </div>
+                <div class="interactive-grid">
+                    <!-- Left Column: List of Links -->
+                    <div class="interactive-list">
+                        <button class="industry-link active" data-target="ind-aerospace">Aerospace and Defense</button>
+                        <button class="industry-link" data-target="ind-automotive">Automotive</button>
+                        <button class="industry-link">Banking</button>
+                        <button class="industry-link">Capital Markets</button>
+                        <!-- Add other industries as disabled buttons -->
+                    </div>
+                    <!-- Right Column: Dynamic Content -->
+                    <div class="interactive-content-display">
+                        <!-- Aerospace Content -->
+                        <div id="ind-aerospace" class="industry-content active">
+                            <h3>Navigate headwinds</h3>
+                            <p>From economic uncertainty and supply chain disruptions to skill gaps, the Aerospace and Defense industry is being challenged. The time is now to embrace a digital-first mindset.</p>
+                            <img src="assets/images/aerospace.png" alt="Aerospace illustration">
+                        </div>
+                        <!-- Automotive Content -->
+                        <div id="ind-automotive" class="industry-content">
+                            <h3>Drive the future of automotive</h3>
+                            <p>We help automotive companies transform their business models, create new revenue streams, and deliver exceptional customer experiences.</p>
+                            <img src="assets/images/automotive.png" alt="Automotive illustration">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+    
+    <!-- Re-use the Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-section">
+                    <h4>About Accenture</h4>
+                    <ul>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Leadership</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Locations</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="#">Strategy & Consulting</a></li>
+                        <li><a href="#">Technology</a></li>
+                        <li><a href="#">Operations</a></li>
+                        <li><a href="#">Song</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Industries</h4>
+                    <ul>
+                        <li><a href="#">Banking</a></li>
+                        <li><a href="#">Healthcare</a></li>
+                        <li><a href="#">Retail</a></li>
+                        <li><a href="#">Technology</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Connect with us</h4>
+                    <div class="social-links">
+                        <a href="#" aria-label="LinkedIn"><img src="assets/images/linkedin.png" alt="LinkedIn"></a>
+                        <a href="#" aria-label="Facebook"><img src="assets/images/facebook.png" alt="Facebook"></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2025 Tejas's Accenture. All rights reserved.</p>
+                <ul class="footer-links">
+                    <li><a href="#">Privacy Statement</a></li>
+                    <li><a href="#">Terms & Conditions</a></li>
+                    <li><a href="#">Cookie Policy</a></li>
+                    <li><a href="#">Accessibility</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <!-- New JavaScript file for this page's interactivity -->
+    <script src="js/what-we-do.js"></script>
+</body>
+</html>
