@@ -1,0 +1,389 @@
+/* In sections.css - This looks correct if your folder structure is right */
+@font-face {
+    font-family: 'Graphik'; /* Keep the name simple */
+    src: url('../assets/fonts/Graphik-Semibold-Trial.otf') format('opentype');
+    font-weight: 600; /* Use a weight, not 'normal' for semibold */
+    font-style: normal;
+}
+
+/* It's good practice to define other weights if you have them */
+body {
+    font-family: 'Graphik', sans-serif;
+}
+
+
+/* --- Hero Section (Final Aligned Version) --- */
+.hero-dark {
+    background: #000000;
+    padding: 3.5rem 0 2.5rem 0;
+}
+.hero-flex {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 2rem;
+}
+.hero-left {
+    flex: 1 1 320px;
+}
+.hero-right {
+    flex: 1 1 340px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+.hero-title {
+    font-family: var(--heading-font);
+    font-size: 5.5rem; /* Increased size to match screenshot */
+    font-weight: 700;  /* 700 is a more standard bold weight */
+    color: #fff;
+    line-height: 1.1; /* Adjusted for better line spacing */
+    letter-spacing: -3px;
+    margin-bottom: 0;
+    text-transform: uppercase;
+}
+
+
+.hero-title .line-1,
+.hero-title .line-2 {
+    display: block; /* Puts each span on its own line */
+}
+
+.hero-title .line-2 {
+    padding-left: 9rem; /* THIS CREATES THE INDENT */
+}
+
+/* Your original arrow style, slightly adjusted for a standard font-weight */
+.accent-arrow {
+    color: #9900FF;
+    font-size: 5.5rem; /* Match the parent font size */
+    font-weight: 800;
+}
+.hero-desc {
+    color: #d1d1d1;
+    font-family: var(--font-family);
+    font-size: 1.18rem;
+    font-weight: 400;
+    letter-spacing: 0.01em;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+    max-width: 540px;
+}
+.see-what-we-do {
+    color: #fff;
+    background: linear-gradient(90deg, #a259ff 0%, #6a82fb 100%);
+    padding: 0.5rem 1.7rem;
+    border-radius: 2.5rem;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1rem;
+    display: inline-block;
+    box-shadow: 0 2px 12px 0 rgba(162,89,255,0.15);
+    transition: background 0.2s;
+    border: none;
+    outline: none;
+    min-width: 0;
+    min-height: 0;
+}
+.see-what-we-do:hover {
+    background: linear-gradient(90deg, #6a82fb 0%, #a259ff 100%);
+}
+
+/* Card Grid Section */
+.card-grid-section {
+    margin-top: 0;
+    padding: 2.5rem 0 1.5rem 0;
+    background: #181818;
+}
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+}
+.card {
+    position: relative;
+    background: #222;
+    border-radius: 1.2rem;
+    min-height: 320px;
+    box-shadow: 0 2px 16px 0 rgba(0,0,0,0.08);
+    transition: transform 0.15s, box-shadow 0.15s;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    overflow: hidden;
+    padding: 0;
+}
+.card:hover {
+    transform: translateY(-8px) scale(1.03);
+    box-shadow: 0 6px 32px 0 rgba(162,89,255,0.12);
+}
+.card-with-image {
+    background-size: cover;
+    background-position: center;
+}
+.card-with-image::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(20,20,20,0.1) 40%, rgba(0,0,0,0.7) 100%);
+    z-index: 1;
+}
+.card-content {
+    position: relative;
+    z-index: 2;
+    padding: 1.7rem 1.2rem 1.2rem 1.2rem;
+}
+.card-category {
+    font-size: 0.92rem;
+    color: #bdbdbd;
+    font-weight: 600;
+    margin-bottom: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+.card-title {
+    font-size: 1.15rem;
+    color: #fff;
+    font-weight: 700;
+    margin-bottom: 0.7rem;
+    line-height: 1.3;
+}
+.card-image {
+    flex: 1;
+    background-size: cover;
+    background-position: center;
+    border-radius: 0.7rem;
+    min-height: 80px;
+    margin-top: auto;
+    display: none; /* Hide for now, enable if you have images */
+}
+
+.value-360-section {
+    background: #000;
+    color: #fff;
+    padding: 60px 20px;
+    text-align: center;
+  }
+  
+  .value-360-carousel-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 40px;
+    
+  }
+  
+  .value-360-carousel-image img {
+    max-width: 100%;
+    height: 350px;
+    border-radius: 8px;
+    float: left;
+    
+   
+  }
+  
+  .value-360-carousel-controls {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    
+  }
+  
+  .carousel-prev,
+  .carousel-next {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    font-size: 20px;
+    cursor: pointer;
+    border-radius: 4px;
+  }
+  
+  .carousel-indicator {
+    font-weight: bold;
+  }
+  
+  /* Add this to your style.css or sections.css */
+
+.featured-card {
+    /* ... your existing styles ... */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end; /* This is key */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.featured-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+}
+
+/* The content that is always visible */
+.featured-content-base {
+    padding: 2rem 1.2rem 1.5rem 1.2rem;
+    z-index: 3;
+    transition: opacity 0.3s ease;
+}
+
+/* The content that appears on hover */
+.featured-content-hover {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 1.5rem 1.2rem;
+    background: linear-gradient(180deg, transparent 0%, rgba(0,0,0,0.85) 40%);
+    z-index: 2;
+    opacity: 0; /* Hidden by default */
+    transform: translateY(20px); /* Start slightly lower */
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.featured-card:hover .featured-content-hover {
+    opacity: 1; /* Show on hover */
+    transform: translateY(0); /* Slide into place */
+}
+
+.featured-card:hover .featured-content-base {
+    opacity: 0; /* Hide the base content on hover */
+}
+
+.featured-content-hover p {
+    color: #e0e0e0;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+}
+
+.expand-link {
+    color: #fff;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.expand-link span {
+    color: #A100FF; /* Accent purple */
+}
+
+/* This creates the purple tint on hover for most cards */
+.featured-card::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #A100FF;
+    mix-blend-mode: color; /* This blend mode often works well */
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: 1;
+}
+
+.featured-card:hover::after {
+    opacity: 0.6;
+}
+
+/* For the card that is already purple, we don't want the hover effect */
+.featured-card.accent-bg {
+    background-color: #5d1a9b; /* A base purple */
+}
+.featured-card.accent-bg::after {
+    display: none; /* Disable the hover tint */
+}
+
+/* Add to your 360 value section styles */
+.value-360-image, .value-360-text h3, .value-360-text p {
+    transition: opacity 0.3s ease-in-out;
+}
+
+.fade-out {
+    opacity: 0;
+}
+
+
+/* --- Resource Downloads Section --- */
+
+.downloads-section {
+    background: #000;
+    padding: 6rem 0;
+    border-top: 1px solid #222; /* Optional separator line */
+}
+
+.downloads-title {
+    text-align: center;
+    font-size: 3rem;
+    margin-bottom: 3rem;
+}
+
+.downloads-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.download-item {
+    background: #1a1a1a;
+    border: 1px solid #333;
+    border-radius: 8px;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column; /* This helps align the button at the bottom */
+    transition: transform 0.2s ease-out, box-shadow 0.2s ease-out;
+}
+
+.download-item:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 30px rgba(161, 0, 255, 0.1);
+}
+
+.download-icon {
+    height: 45px;
+    width: auto; /* Maintain aspect ratio */
+    margin-bottom: 1.5rem;
+    align-self: flex-start; /* Keep icon at the top left */
+}
+
+.download-item h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.download-item p {
+    color: #c0c0c0;
+    flex-grow: 1; /* This pushes the button down */
+    margin-bottom: 1.5rem;
+}
+
+.download-button {
+    display: block;
+    background: #A100FF;
+    color: #fff;
+    text-align: center;
+    padding: 0.8rem 1rem;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background-color 0.2s;
+}
+
+.download-button:hover {
+    background-color: #5d1a9b; /* Darker purple on hover */
+    color: #fff;
+}
+
+/* Responsive adjustments for the download grid */
+@media (max-width: 900px) {
+    .downloads-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+@media (max-width: 600px) {
+    .downloads-grid {
+        grid-template-columns: 1fr;
+    }
+}
